@@ -1,0 +1,11 @@
+NAME                    NETWORK  DIRECTION  PRIORITY  ALLOW                         DENY  DISABLED
+default-allow-icmp      default  INGRESS    65534     icmp                                False
+default-allow-internal  default  INGRESS    65534     tcp:0-65535,udp:0-65535,icmp        False
+default-allow-rdp       default  INGRESS    65534     tcp:3389                            False
+default-allow-ssh       default  INGRESS    65534     tcp:22                              False
+
+To show all fields of the firewall, please show in JSON format: --format=json
+To show all fields in table format, please see the examples in --help.
+
+Comentario:
+Las reglas por defecto permiten conexiones SSH mediante el puerto 22 y tráfico ICMP para pruebas de conectividad (ping).
